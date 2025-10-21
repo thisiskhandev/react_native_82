@@ -6,4 +6,15 @@ module.exports = {
   tabWidth: 2,
   semi: true,
   jsxSingleQuote: true,
+  plugins: ['prettier-plugin-tailwindcss'],
 };
+
+// module.exports = {
+//   singleQuote: true,
+//   semi: true,
+//   trailingComma: 'all',
+//   printWidth: 100,
+//   tabWidth: 2,
+//   plugins: [require('prettier-plugin-tailwindcss')],
+// };
+

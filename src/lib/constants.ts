@@ -16,7 +16,6 @@ import {
   IS_ALPHA_PHASE,
 } from '@env';
 
-
 export const ENV_CONSTANTS = {
   BASE_URL: API_BASE_URL,
   ANDROID_MAP_KEY: ANDROID_MAP_KEYS,
@@ -35,35 +34,32 @@ export const ENV_CONSTANTS = {
   IS_ALPHA_PHASE: IS_ALPHA_PHASE === 'true',
 };
 
-
-export const locales = ["en"] as const; // Literal tuple
+export const locales = ['en'] as const; // Literal tuple
 export type Locale = (typeof locales)[number]; // Creates a union type "en" | "am"
 
 export const VIDEOS = {
-  SPLASH_VIDEO: "/assets/common/splash.mp4",
+  SPLASH_VIDEO: '/assets/common/splash.mp4',
 };
 
-export const SUB_TITLE = "/assets/temp/sub.vtt";
+export const SUB_TITLE = '/assets/temp/sub.vtt';
 
 export type Locales = (typeof locales)[number];
 
 export const CONSTANTS = {
-  LOCALE: "Next-Locale",
-  COUNTRY: "US",
-  CURRENCY: "UD",
-  AREA_UNIT: "Sq.Ft.",
-  RETURN_URL: "returnUrl",
-  PHONE: "+234 0806 584 1300",
-  EMAIL: "email@mail.com",
-  ADDRESS: "Address",
-  TOKEN: "token",
-  USER_ROLE: "user_role",
+  LOCALE: 'Next-Locale',
+  COUNTRY: 'US',
+  CURRENCY: 'UD',
+  AREA_UNIT: 'Sq.Ft.',
+  RETURN_URL: 'returnUrl',
+  PHONE: '+234 0806 584 1300',
+  EMAIL: 'email@mail.com',
+  ADDRESS: 'Address',
+  TOKEN: 'token',
+  USER_ROLE: 'user_role',
   USER_STATUS: 0,
-  IS_VERIFIED: "is_verified_email",
-  NOT_AVAILABLE: "Not Available",
-  UDID: "udid",
-  APP_STORE_LINK:
-    "",
-  GOOGLE_STORE_LINK:
-    "",
+  IS_VERIFIED: 'is_verified_email',
+  NOT_AVAILABLE: 'Not Available',
+  UDID: 'udid',
+  APP_STORE_LINK: '',
+  GOOGLE_STORE_LINK: '',
 };

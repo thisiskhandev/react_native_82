@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
-import {store} from 'store/store';
+import { store } from 'store/store';
 import { setIsAppLoading, setIsUserLoggedIn } from 'store/slices/appSettings';
 import { getItem, removeMultipleItem } from './storage';
 import { CONSTANTS, ENV_CONSTANTS } from './constants';
@@ -97,11 +97,11 @@ const handleRequestError = async (error: AxiosError<ErrorResponse>) => {
       if (error.code === 'ECONNABORTED') {
         throw new SocketError('Socket timeout: The request took too long to complete.');
       }
-    //   const netState = await NetInfo.fetch();
-    //   if (!netState.isConnected) {
-    //     throw new NetworkError('No Internet Connection. Please check your network.');
-    //   }
-    //   throw new NetworkError('Server unreachable. Please try again later.');
+      //   const netState = await NetInfo.fetch();
+      //   if (!netState.isConnected) {
+      //     throw new NetworkError('No Internet Connection. Please check your network.');
+      //   }
+      //   throw new NetworkError('Server unreachable. Please try again later.');
     }
 
     const status = error.response.status;
