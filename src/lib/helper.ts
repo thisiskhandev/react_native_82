@@ -1,18 +1,52 @@
 import { clsx, type ClassValue } from 'clsx';
+import { Alert, AlertButton, Platform } from 'react-native';
 import { twMerge } from 'tailwind-merge';
+import { showToast } from './toast';
+import NetInfo from '@react-native-community/netinfo';
+import parsePhoneNumber from 'libphonenumber-js';
 
 export const cn = (...args: ClassValue[]) => {
   return twMerge(clsx(args));
 };
 
-export const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+export const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
+
+export const isIOS = () => {
+  const isIOS = Platform.OS === 'ios';
+  return isIOS;
+};
+
+export const initNetworkListener = () => {
+  NetInfo.addEventListener(state => {
+    if (!state.isConnected) {
+      showToast({ message: '📴 No Internet Connection' });
+    } else {
+      showToast({ message: '✅ Back Online', isError: false });
+    }
+  });
+};
+
+export function splitPhoneNumberWithCode(phoneNumber: string | null | undefined) {
+  try {
+    const parsed = parsePhoneNumber(phoneNumber ?? '');
+    return {
+      countryCode: '+' + parsed?.countryCallingCode,
+      number: parsed?.nationalNumber,
+    };
+  } catch {
+    return {
+      countryCode: '',
+      number: phoneNumber,
+    };
+  }
+}
 
 export const openCameraOrGallery = ({
   cameraPress,
   galleryPress,
 }: {
-  cameraPress: voidFuntionType;
-  galleryPress: voidFuntionType;
+  cameraPress: AlertButton['onPress'];
+  galleryPress: AlertButton['onPress'];
 }) => {
   Alert.alert(
     'Choose Option',
