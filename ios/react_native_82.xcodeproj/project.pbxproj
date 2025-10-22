@@ -10,39 +10,39 @@
 		0C80B921A6F3F58F76C31292 /* libPods-react_native_82.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-react_native_82.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		177741AFC3BE27A9FFD986AD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		1DBBFADF561F4255856DFFD1 /* GorditaBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5512E706106C42CE88E28F26 /* GorditaBlack.otf */; };
+		2A09F3C0EF214E208C6DC2EE /* GorditaRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6913FB8025A845EC81985844 /* GorditaRegular.otf */; };
+		35FABE29D794428EBA4AF46D /* PoppinsRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 358C404B914B46CD82F67784 /* PoppinsRegular.ttf */; };
+		69F5D9E39FB249A9B70DA735 /* GorditaLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C32E3465EC024AC0A50839F6 /* GorditaLight.otf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		1DBBFADF561F4255856DFFD1 /* GorditaBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5512E706106C42CE88E28F26 /* GorditaBlack.otf */; };
 		860798E42696439A993A9589 /* GorditaBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E5A4EC0DDBA41139C46A8EC /* GorditaBold.otf */; };
-		69F5D9E39FB249A9B70DA735 /* GorditaLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C32E3465EC024AC0A50839F6 /* GorditaLight.otf */; };
+		A3198B62235B4449A81F49BC /* PoppinsSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8435F4BE2B840A3861C2288 /* PoppinsSemiBold.ttf */; };
 		C6CED65136154985AAF41E27 /* GorditaMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F62DD4039C849579BA69613 /* GorditaMedium.otf */; };
-		2A09F3C0EF214E208C6DC2EE /* GorditaRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6913FB8025A845EC81985844 /* GorditaRegular.otf */; };
 		CE292CD5CD064AA4AB01D46E /* PoppinsBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FFF3E434BF3478E958CB33E /* PoppinsBold.ttf */; };
 		E1A10B3DF62B4C4CB7FD76FB /* PoppinsMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0279F0BB2CC4002B7BD91DD /* PoppinsMedium.ttf */; };
-		35FABE29D794428EBA4AF46D /* PoppinsRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 358C404B914B46CD82F67784 /* PoppinsRegular.ttf */; };
-		A3198B62235B4449A81F49BC /* PoppinsSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8435F4BE2B840A3861C2288 /* PoppinsSemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FFF3E434BF3478E958CB33E /* PoppinsBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsBold.ttf; path = ../assets/fonts/PoppinsBold.ttf; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* react_native_82.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = react_native_82.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = react_native_82/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = react_native_82/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = react_native_82/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		358C404B914B46CD82F67784 /* PoppinsRegular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsRegular.ttf; path = ../assets/fonts/PoppinsRegular.ttf; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-react_native_82.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-react_native_82.debug.xcconfig"; path = "Target Support Files/Pods-react_native_82/Pods-react_native_82.debug.xcconfig"; sourceTree = "<group>"; };
+		5512E706106C42CE88E28F26 /* GorditaBlack.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = GorditaBlack.otf; path = ../assets/fonts/GorditaBlack.otf; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-react_native_82.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-react_native_82.release.xcconfig"; path = "Target Support Files/Pods-react_native_82/Pods-react_native_82.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-react_native_82.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-react_native_82.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F62DD4039C849579BA69613 /* GorditaMedium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = GorditaMedium.otf; path = ../assets/fonts/GorditaMedium.otf; sourceTree = "<group>"; };
+		6913FB8025A845EC81985844 /* GorditaRegular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = GorditaRegular.otf; path = ../assets/fonts/GorditaRegular.otf; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = react_native_82/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = react_native_82/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E5A4EC0DDBA41139C46A8EC /* GorditaBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = GorditaBold.otf; path = ../assets/fonts/GorditaBold.otf; sourceTree = "<group>"; };
+		A0279F0BB2CC4002B7BD91DD /* PoppinsMedium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsMedium.ttf; path = ../assets/fonts/PoppinsMedium.ttf; sourceTree = "<group>"; };
+		C32E3465EC024AC0A50839F6 /* GorditaLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = GorditaLight.otf; path = ../assets/fonts/GorditaLight.otf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		5512E706106C42CE88E28F26 /* GorditaBlack.otf */ = {isa = PBXFileReference; name = "GorditaBlack.otf"; path = "../assets/fonts/GorditaBlack.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9E5A4EC0DDBA41139C46A8EC /* GorditaBold.otf */ = {isa = PBXFileReference; name = "GorditaBold.otf"; path = "../assets/fonts/GorditaBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C32E3465EC024AC0A50839F6 /* GorditaLight.otf */ = {isa = PBXFileReference; name = "GorditaLight.otf"; path = "../assets/fonts/GorditaLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5F62DD4039C849579BA69613 /* GorditaMedium.otf */ = {isa = PBXFileReference; name = "GorditaMedium.otf"; path = "../assets/fonts/GorditaMedium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6913FB8025A845EC81985844 /* GorditaRegular.otf */ = {isa = PBXFileReference; name = "GorditaRegular.otf"; path = "../assets/fonts/GorditaRegular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0FFF3E434BF3478E958CB33E /* PoppinsBold.ttf */ = {isa = PBXFileReference; name = "PoppinsBold.ttf"; path = "../assets/fonts/PoppinsBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A0279F0BB2CC4002B7BD91DD /* PoppinsMedium.ttf */ = {isa = PBXFileReference; name = "PoppinsMedium.ttf"; path = "../assets/fonts/PoppinsMedium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		358C404B914B46CD82F67784 /* PoppinsRegular.ttf */ = {isa = PBXFileReference; name = "PoppinsRegular.ttf"; path = "../assets/fonts/PoppinsRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F8435F4BE2B840A3861C2288 /* PoppinsSemiBold.ttf */ = {isa = PBXFileReference; name = "PoppinsSemiBold.ttf"; path = "../assets/fonts/PoppinsSemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F8435F4BE2B840A3861C2288 /* PoppinsSemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsSemiBold.ttf; path = ../assets/fonts/PoppinsSemiBold.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,17 +108,8 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3B4392A12AC88292D35C810B /* Pods-react_native_82.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-react_native_82.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		9BE0990A9AFD4B2E88A8EEB6 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				5512E706106C42CE88E28F26 /* GorditaBlack.otf */,
 				9E5A4EC0DDBA41139C46A8EC /* GorditaBold.otf */,
@@ -131,8 +122,17 @@
 				F8435F4BE2B840A3861C2288 /* PoppinsSemiBold.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4392A12AC88292D35C810B /* Pods-react_native_82.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-react_native_82.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
