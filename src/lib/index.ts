@@ -6,3 +6,6 @@ export * from './storage';
 export * from './colors';
 export * from './toast';
 export * from './location';
+export * from './linking';
+export * from './fonts';
+export * from './styles';

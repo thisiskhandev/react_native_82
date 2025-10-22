@@ -1,5 +1,5 @@
 import { clsx, type ClassValue } from 'clsx';
-import { Alert, AlertButton, Platform } from 'react-native';
+import { Alert, AlertButton, Dimensions, Platform } from 'react-native';
 import { twMerge } from 'tailwind-merge';
 import { showToast } from './toast';
 import NetInfo from '@react-native-community/netinfo';
@@ -7,6 +7,21 @@ import parsePhoneNumber from 'libphonenumber-js';
 
 export const cn = (...args: ClassValue[]) => {
   return twMerge(clsx(args));
+};
+
+export const screenHeight = (percent: number) => {
+  const screenHeight = Dimensions.get('window').height;
+  return (screenHeight * percent) / 100;
+};
+
+export const screenWidth = (percent: number) => {
+  const screenWidth = Dimensions.get('window').width;
+  return (screenWidth * percent) / 100;
+};
+
+export const fontScale = (percent: number) => {
+  const scale = Dimensions.get('window').scale;
+  return (scale * percent) / 2;
 };
 
 export const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));

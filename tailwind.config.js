@@ -29,7 +29,17 @@ module.exports = {
       },
 
       fontFamily: {
-        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+        // Gordita family (mapped to your native font names)
+        'gordita-black': ['Gordita-Black'],
+        'gordita-bold': ['Gordita-Bold'],
+        'gordita-medium': ['Gordita-Medium'],
+        'gordita-regular': ['Gordita-Regular'],
+        'gordita-light': ['Gordita-Light'],
+
+        // Poppins family
+        'poppins-bold': ['Poppins-Bold'],
+        'poppins-medium': ['Poppins-Medium'],
+        'poppins-regular': ['Poppins-Regular'],
       },
 
       fontSize: {
