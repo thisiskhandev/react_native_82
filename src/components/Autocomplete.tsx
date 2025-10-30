@@ -10,7 +10,7 @@ import { FontSize } from 'types/fontTypes';
 import { Typography, Icon, RowComponent } from 'components/index';
 import { StyleSheet, TextStyle, View, ViewStyle } from 'react-native';
 import { SetStateType } from 'types/common';
-import { IconComponentProps } from './Icon';
+import { IconComponentProps } from './Icons';
 
 interface AutoCompleteProps {
   title?: string;

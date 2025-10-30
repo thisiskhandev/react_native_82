@@ -1,57 +1,50 @@
 import './global.css';
-
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, Text, useColorScheme, View, ActivityIndicator } from 'react-native';
-import { SafeAreaProvider, SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import { store, persistor } from 'redux/store';
-import { Typography } from 'components/index';
+import React, { useEffect } from 'react';
+import { View } from 'react-native';
+import { Button, Typography } from 'components/index';
+import { init } from 'lib/language/i18nextConfig';
+import { changeAppLanguage, loadAppLanguage, resetAppLanguage } from 'lib/language/languageUtils';
+import { useTranslation } from 'hooks/useTranslation';
+import { useDispatch } from 'react-redux';
+import { setAppLanguage } from 'redux/slices/appSettings';
+import StoreProvider from './StoreProvider';
 
 const App = () => {
-  // useFirebaseMessaging();
-  const isDarkMode = useColorScheme() === 'dark';
+  const dispatch = useDispatch();
+  const { currentLocale } = useTranslation();
+
+  console.log('currentLocale', currentLocale);
+
+  useEffect(() => {
+    (async () => {
+      await init();
+      const { locale } = await loadAppLanguage();
+      dispatch(setAppLanguage(locale));
+    })();
+  }, [dispatch]);
+
   return (
-    <Provider store={store}>
-      <SafeAreaProvider>
-        <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
-          <SafeAreaView className='flex-1 bg-slate-300'>
-            <View className='h-screen flex-1 items-center justify-center bg-slate-700'>
-              <Text className='font-gordita-black text-4xl font-bold text-emerald-500'>HHH</Text>
-              <Text className='mt-2 font-poppins-regular text-base text-secondary'>
-                Styled with NativeWind + Gordita & Poppins 💎
-              </Text>
-
-              <Text>adlksfjalkj</Text>
-              <Typography>Hellow dilawr</Typography>
-
-              <Text style={styles.title}>Play. Style. Repeat.</Text>
-            </View>
-          </SafeAreaView>
-        </PersistGate>
-      </SafeAreaProvider>
-    </Provider>
+    <View className='flex h-screen items-center justify-center gap-5 bg-slate-700'>
+      <View className='flex w-full max-w-[300px] items-center gap-5'>
+        {currentLocale && (
+          <Typography className='text-white' variant='h3'>
+            Current Locale: {currentLocale}
+          </Typography>
+        )}
+        <Button title='Reset Language' onPress={resetAppLanguage} />
+        <Button className='w-full' onPress={() => changeAppLanguage('en')} title='Change English' />
+        <Button className='w-full' onPress={() => changeAppLanguage('ar')} title='Change Arabic' />
+        <Button className='w-full' onPress={() => changeAppLanguage('hi')} title='Change Hindi' />
+        <Typography text='continue' />
+      </View>
+    </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#fff',
-    fontFamily: 'Gordita-Black',
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#666666',
-    marginTop: 10,
-  },
-});
-
-export default App;
+export default function Main() {
+  return (
+    <StoreProvider>
+      <App />
+    </StoreProvider>
+  );
+}

@@ -9,7 +9,7 @@ import {
 import { FontSize, StyleType } from 'types/index';
 import { Typography, Icon, RowComponent } from '../components';
 import { RootState, useAppSelector } from 'store/store';
-import { IconComponentProps } from './Icon';
+import { IconComponentProps } from './Icons';
 import { COLORS } from '../lib';
 
 interface ButtonProps extends TouchableOpacityProps {

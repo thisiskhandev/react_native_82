@@ -35,7 +35,7 @@ export const IconComponentMapping = {
 } as const;
 
 // Icon component
-const Icon = ({
+const Icons = ({
   componentName,
   iconName,
   size = FontSize.Medium,
@@ -63,5 +63,5 @@ const Icon = ({
   );
 };
 
-export default Icon;
+export default Icons;
 // {transform: [{scaleX: isLangRTL ? -1 : 1}]}
