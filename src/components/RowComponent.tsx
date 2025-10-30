@@ -1,6 +1,6 @@
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import { CommonProps } from 'types/index';
-import { FLEX_BETWEEN } from 'src/lib/index';
+import { FLEX_BETWEEN } from 'lib/index';
 // import { useTranslation } from 'hooks/index';
 
 interface Props extends CommonProps {

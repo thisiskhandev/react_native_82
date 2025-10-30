@@ -1,15 +1,8 @@
 {
   "extends": "@react-native/typescript-config",
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "nativewind-env.d.ts"
-  ],
-  "exclude": [
-    "**/node_modules",
-    "**/Pods"
-  ],
-   "compilerOptions": {
+  "include": ["**/*.ts", "**/*.tsx", "nativewind-env.d.ts"],
+  "exclude": ["**/node_modules", "**/Pods"],
+  "compilerOptions": {
     "module": "esnext",
     "target": "es2020",
     "skipLibCheck": true,
@@ -27,6 +20,7 @@
       "types/*": ["./src/types/*"],
       "assets/*": ["./src/assets/*"],
       "components/*": ["./src/components/*"],
+      "lib/*": ["./src/lib/*"],
       "screens/*": ["./src/screens/*"],
       "translation/*": ["./src/translation/*"],
       "utils/*": ["./src/utils/*"],

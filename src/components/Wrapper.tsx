@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Keyboard, KeyboardAvoidingView, ScrollView, StatusBar, View } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Loader } from 'src/components/index';
-import { COLORS, isIOS } from 'src/lib/index';
-import { cn } from 'src/lib/index';
+import { Loader } from 'components/index';
+import { COLORS, isIOS } from 'lib/index';
+import { cn } from 'lib/index';
 import { RootState, useAppSelector } from 'store/store';
 
 interface WrapperProps {

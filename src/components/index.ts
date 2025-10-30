@@ -1,4 +1,4 @@
-export { default as Autocomplete } from './Autocomplete';
+// export { default as Autocomplete } from './Autocomplete';
 export { default as Button } from './Button';
 export { default as Icon } from './Icon';
 export { default as ImagePicker } from './ImagePicker';

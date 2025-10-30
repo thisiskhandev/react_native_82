@@ -6,7 +6,23 @@ import { SafeAreaProvider, SafeAreaView, useSafeAreaInsets } from 'react-native-
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './src/redux/store';
-import { FONT_FAMILY } from 'src/lib/fonts';
+import { Typography } from './src/components/index';
+
+// const App = () => {
+//   return (
+//     <View className='h-screen flex-1 items-center justify-center bg-slate-700'>
+//       <Text className='font-gordita-black text-4xl font-bold text-emerald-500'>HHH</Text>
+//       <Text className='mt-2 font-poppins-regular text-base text-secondary'>
+//         Styled with NativeWind + Gordita & Poppins 💎
+//       </Text>
+
+//       <Text>adlksfjalkj</Text>
+//       <Typography>Hello lovely</Typography>
+
+//       <Text style={styles.title}>Play. Style. Repeat.</Text>
+//     </View>
+//   );
+// };
 
 const App = () => {
   // useFirebaseMessaging();
@@ -17,12 +33,13 @@ const App = () => {
         <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
           <SafeAreaView className='flex-1 bg-slate-300'>
             <View className='h-screen flex-1 items-center justify-center bg-slate-700'>
-              <Text className='font-gordita-black text-4xl font-bold text-emerald-500'>
-                Welcome to Nativewind!
-              </Text>
-              <Text className='text-secondary font-poppins-regular mt-2 text-base'>
+              <Text className='font-gordita-black text-4xl font-bold text-emerald-500'>HHH</Text>
+              <Text className='mt-2 font-poppins-regular text-base text-secondary'>
                 Styled with NativeWind + Gordita & Poppins 💎
               </Text>
+
+              <Text>adlksfjalkj</Text>
+              <Typography>Hellow dilawr</Typography>
 
               <Text style={styles.title}>Play. Style. Repeat.</Text>
             </View>

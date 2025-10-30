@@ -1,5 +1,5 @@
 import { View, ActivityIndicator, ViewStyle, StyleSheet } from 'react-native';
-import { COLORS, screenHeight, screenWidth } from 'src/lib/index';
+import { COLORS, screenHeight, screenWidth } from '../lib';
 
 interface LoaderProps {
   containerStyle?: ViewStyle;

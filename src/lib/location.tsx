@@ -1,7 +1,7 @@
 import Geolocation, { GeolocationResponse } from '@react-native-community/geolocation';
 import Permissions, { check, PERMISSIONS, RESULTS } from 'react-native-permissions';
 import { Alert, Linking } from 'react-native';
-import { isIOS, ENV_CONSTANTS } from 'src/lib/index';
+import { isIOS, ENV_CONSTANTS } from '../lib';
 // import { getUniqueId } from 'react-native-device-info';
 
 interface AddressComponents {

@@ -7,10 +7,10 @@ import {
   StyleProp,
 } from 'react-native';
 import { FontSize, StyleType } from 'types/index';
-import { COLORS } from 'src/lib/index';
-import { Typography, Icon, RowComponent } from 'src/components/index';
+import { Typography, Icon, RowComponent } from '../components';
 import { RootState, useAppSelector } from 'store/store';
 import { IconComponentProps } from './Icon';
+import { COLORS } from '../lib';
 
 interface ButtonProps extends TouchableOpacityProps {
   title: string;

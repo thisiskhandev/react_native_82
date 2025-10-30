@@ -1,7 +1,7 @@
 import { Switch, ViewStyle, TextStyle, StyleSheet, View } from 'react-native';
 import { FontSize } from 'types/fontTypes';
-import { Typography } from 'src/components/index';
-import { COLORS } from 'src/lib/index';
+import { Typography } from 'components/index';
+import { COLORS } from 'lib/index';
 
 interface SwitchButtonProps {
   value: boolean;

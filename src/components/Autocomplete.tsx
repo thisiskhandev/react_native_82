@@ -1,13 +1,13 @@
 import { useRef } from 'react';
-import { AddressDetails, getCurrentLocation, reverseGeocode } from 'src/lib/location';
+import { AddressDetails, getCurrentLocation, reverseGeocode } from 'lib/index';
 import {
   GooglePlacesAutocomplete,
   GooglePlacesAutocompleteRef,
 } from 'react-native-google-places-autocomplete';
 // import { COMMON_TEXT } from 'constants/screens';
-import { ENV_CONSTANTS, VARIABLES, COLORS } from 'src/lib/index';
+import { ENV_CONSTANTS, VARIABLES, COLORS } from 'lib/index';
 import { FontSize } from 'types/fontTypes';
-import { Typography, Icon, RowComponent } from 'src/components/index';
+import { Typography, Icon, RowComponent } from 'components/index';
 import { StyleSheet, TextStyle, View, ViewStyle } from 'react-native';
 import { SetStateType } from 'types/common';
 import { IconComponentProps } from './Icon';

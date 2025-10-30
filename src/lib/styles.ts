@@ -1,5 +1,5 @@
 import { ViewStyle } from 'react-native';
-import { COLORS } from 'src/lib';
+import { COLORS } from '../lib';
 
 export const FLEX_BETWEEN: ViewStyle = {
   alignItems: 'center',
