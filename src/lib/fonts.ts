@@ -1,4 +1,4 @@
-import { isIOS } from '.';
+import { isIOS } from './helper';
 
 export const FONT_FAMILY = {
   GORDITA: {

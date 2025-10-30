@@ -4,7 +4,7 @@ import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Loader } from 'components/index';
 import { COLORS, isIOS } from 'lib/index';
 import { cn } from 'lib/index';
-import { RootState, useAppSelector } from 'store/store';
+import { RootState, useAppSelector } from 'redux/index';
 
 interface WrapperProps {
   children: React.ReactNode;
