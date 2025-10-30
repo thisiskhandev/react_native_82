@@ -1,7 +1,7 @@
 import './global.css';
 import React, { useEffect } from 'react';
 import { View } from 'react-native';
-import { Button, Typography } from 'components/index';
+import { Button, Icons, Typography } from 'components/index';
 import { init } from 'lib/language/i18nextConfig';
 import { changeAppLanguage, loadAppLanguage, resetAppLanguage } from 'lib/language/languageUtils';
 import { useTranslation } from 'hooks/useTranslation';
@@ -31,6 +31,7 @@ const App = () => {
             Current Locale: {currentLocale}
           </Typography>
         )}
+        <Icons componentName='AntDesign' iconName='home' size={40} color='#000' />
         <Button title='Reset Language' onPress={resetAppLanguage} />
         <Button className='w-full' onPress={() => changeAppLanguage('en')} title='Change English' />
         <Button className='w-full' onPress={() => changeAppLanguage('ar')} title='Change Arabic' />
