@@ -5,23 +5,32 @@ import { showToast } from './toast';
 import NetInfo from '@react-native-community/netinfo';
 import parsePhoneNumber from 'libphonenumber-js';
 import { IconComponentProps } from 'components/Icons';
-import Icons from "components/Icons"
+import Icons from 'components/Icons';
 
-export const cn = (...args: ClassValue[]) => {
-  return twMerge(clsx(args));
-};
+import { extendTailwindMerge } from 'tailwind-merge';
 
-export const renderStartEndContent = (
-  content?: IconComponentProps | React.ReactNode,
-) => {
+const customTwMerge = extendTailwindMerge({
+  extend: {
+    classGroups: {
+      'font-size': ['text-h1a'], // Add your custom text sizes
+    },
+  },
+});
+
+// Your new cn function
+export function cn(...inputs: ClassValue[]) {
+  return customTwMerge(clsx(inputs));
+}
+
+// export const cn = (...args: ClassValue[]) => {
+//   return twMerge(clsx(args));
+// };
+
+export const renderStartEndContent = (content?: IconComponentProps | React.ReactNode) => {
   if (!content) return null;
 
   // If it's an object that contains 'componentName' and 'iconName', assume it's an icon config
-  if (
-    typeof content === 'object' &&
-    'componentName' in content &&
-    'iconName' in content
-  ) {
+  if (typeof content === 'object' && 'componentName' in content && 'iconName' in content) {
     return <Icons {...(content as IconComponentProps)} />;
   }
 

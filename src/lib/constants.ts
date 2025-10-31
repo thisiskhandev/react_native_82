@@ -124,8 +124,8 @@ export const VARIABLES = {
   MaterialIcons: 'MaterialIcons' as IconComponentName,
 };
 
-export const locales = ['en'] as const; // Literal tuple
-export type Locale = (typeof locales)[number]; // Creates a union type "en" | "am"
+// export const locales = ['en'] as const; // Literal tuple
+// export type Locale = (typeof locales)[number]; // Creates a union type "en" | "am"
 
 export const VIDEOS = {
   SPLASH_VIDEO: '/assets/common/splash.mp4',

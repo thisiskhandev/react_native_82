@@ -13,6 +13,7 @@ export type voidFuntionType = () => void;
 export type CommonProps = {
   children: ChildrenType;
   style?: StyleType;
+  className?: string;
 };
 
 export enum PROVIDERS {

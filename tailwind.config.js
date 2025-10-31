@@ -1,3 +1,5 @@
+import { FONT_SIZES } from './src/lib/fonts';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./App.tsx', './components/**/*.{js,jsx,ts,tsx}'],
@@ -43,15 +45,24 @@ module.exports = {
       },
 
       fontSize: {
-        xs: 12,
-        sm: 14,
-        base: 16,
-        lg: 18,
-        xl: 20,
-        '2xl': 24,
-        '3xl': 30,
-        '4xl': 36,
-        '5xl': 48,
+        h1: 34, // App title / big headers
+        h2: 28, // Section headers
+        h3: 24, // Subsection or screen title
+        h4: 20, // Smaller section title
+        h5: 18, // Minor heading
+        h6: 16, // Uppercase labels or meta text
+        body: 14, // Secondary text
+        bodysm: 12, // Footnotes or metadata
+        caption: 11, // Helper text / subtle info
+        overline: 10, // Tiny uppercase labels
+        sm: 8,
+
+        // ...Object.fromEntries(
+        //   Object.entries(FONT_SIZES).map(([key, value]) => [
+        //     key.toLowerCase().replaceAll('_', '-'),
+        //     value + 'px',
+        //   ]),
+        // ),
       },
 
       borderRadius: {

@@ -9,10 +9,24 @@ export const FONT_FAMILY = {
     LIGHT: isIOS() ? 'Gordita-Light' : 'GorditaLight',
   },
   POPPINS: {
-    // BLACK: isIOS() ? 'Poppins-Black' : 'PoppinsBlack', // NOT ADDED
     BOLD: isIOS() ? 'Poppins-Bold' : 'PoppinsBold',
     MEDIUM: isIOS() ? 'Poppins-Medium' : 'PoppinsMedium',
     REGULAR: isIOS() ? 'Poppins-Regular' : 'PoppinsRegular',
-    // LIGHT: isIOS() ? 'Poppins-Light' : 'PoppinsLight', // NOT ADDED
   },
+};
+
+// 👇 Industry-standard, mobile-optimized type scale
+export const FONT_SIZES = {
+  // Headings (Display)
+  h1: 34, // App title / big headers
+  h2: 28, // Section headers
+  h3: 24, // Subsection or screen title
+  h4: 20, // Smaller section title
+  h5: 18, // Minor heading
+  h6: 16, // Uppercase labels or meta text
+  body: 14, // Secondary text
+  bodysm: 12, // Footnotes or metadata
+  caption: 11, // Helper text / subtle info
+  overline: 10, // Tiny uppercase labels
+  sm: 8,
 };

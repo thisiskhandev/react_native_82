@@ -7,10 +7,12 @@ import {
   StyleProp,
 } from 'react-native';
 import { FontSize, StyleType } from 'types/index';
-import { Typography, Icon, RowComponent } from '../components';
-import { RootState, useAppSelector } from 'store/store';
-import { IconComponentProps } from './Icons';
-import { COLORS } from '../lib';
+import { Typography, RowComponent } from '../components';
+import { RootState, useAppSelector } from 'redux/store';
+import Icons, { IconComponentProps } from './Icons';
+import { cn, COLORS } from '../lib';
+
+type SlotTypes = 'base' | 'prefix' | 'suffix' | 'container';
 
 interface ButtonProps extends TouchableOpacityProps {
   title: string;
@@ -24,6 +26,8 @@ interface ButtonProps extends TouchableOpacityProps {
   loaderSize?: 'small' | 'large';
   startIcon?: IconComponentProps;
   endIcon?: IconComponentProps;
+  classNames?: Partial<Record<SlotTypes, string>>;
+  className?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -38,6 +42,8 @@ const Button: React.FC<ButtonProps> = ({
   containerStyle,
   loaderColor = COLORS.WHITE,
   loaderSize = 'small',
+  className,
+  classNames,
   ...props
 }) => {
   const isAppLoading = useAppSelector((state: RootState) => state.app.isAppLoading);
@@ -58,15 +64,16 @@ const Button: React.FC<ButtonProps> = ({
       style={buttonStyles}
       onPress={onPress}
       disabled={disabled || (loading && isAppLoading)}
+      className={cn(className, classNames?.base)}
       {...props}
     >
       {loading && isAppLoading ? (
         <ActivityIndicator color={loaderColor} size={loaderSize} />
       ) : (
         <RowComponent style={[{ gap: 10, justifyContent: 'center' }, containerStyle]}>
-          {startIcon && <Icon {...startIcon} />}
+          {startIcon && <Icons {...startIcon} />}
           <Typography style={textStyles}>{title}</Typography>
-          {endIcon && <Icon {...endIcon} />}
+          {endIcon && <Icons {...endIcon} />}
         </RowComponent>
       )}
     </TouchableOpacity>

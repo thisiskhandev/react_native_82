@@ -1,7 +1,7 @@
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { CommonProps } from 'types/index';
-import { FLEX_BETWEEN } from 'lib/index';
-// import { useTranslation } from 'hooks/index';
+import { useTranslation } from 'hooks/index';
+import { cn } from 'lib/helper';
 
 interface Props extends CommonProps {
   onPress?: () => void;
@@ -9,30 +9,31 @@ interface Props extends CommonProps {
   activeOpacity?: number;
   hitSlop?: number;
 }
+
 const RowComponent = ({
   children,
-  style,
+  className = '',
   onPress,
   hitSlop,
   isRightLeftJustify = false,
   ...restProps
 }: Props) => {
-  // const { isLangRTL } = useTranslation();
-  const isLangRTL = false; // Replace with actual RTL detection logic
+  const { isLangRTL } = useTranslation();
+
+  const flexDirectionClass = isLangRTL ? 'flex-row-reverse' : 'flex-row';
+  const justifyClass = isRightLeftJustify
+    ? isLangRTL
+      ? 'justify-start'
+      : 'justify-end'
+    : 'justify-between';
+
   return (
     <TouchableOpacity
       onPress={onPress}
-      disabled={onPress ? false : true}
+      disabled={!onPress}
       activeOpacity={onPress ? 0.5 : 1}
-      style={[
-        styles.row,
-        { flexDirection: isLangRTL ? 'row-reverse' : 'row' },
-        isRightLeftJustify && {
-          justifyContent: isLangRTL ? 'flex-start' : 'flex-end',
-        },
-        style,
-      ]}
       hitSlop={hitSlop}
+      className={cn('items-center', flexDirectionClass, justifyClass, className)}
       {...restProps}
     >
       {children}
@@ -40,8 +41,8 @@ const RowComponent = ({
   );
 };
 
-const styles = StyleSheet.create({
-  row: FLEX_BETWEEN,
-});
+// const styles = StyleSheet.create({
+//   row: FLEX_BETWEEN,
+// });
 
 export default RowComponent;

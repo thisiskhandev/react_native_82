@@ -9,3 +9,4 @@ export * from './location';
 export * from './linking';
 export * from './fonts';
 export * from './styles';
+export * from './routes';

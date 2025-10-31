@@ -6,7 +6,20 @@ import { cn, renderStartEndContent } from '../lib/helper';
 import { IconComponentProps } from './Icons';
 import { useTranslation } from 'hooks/useTranslation';
 
-type Variant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+type Variant =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+  | 'body'
+  | 'bodysm'
+  | 'caption'
+  | 'overline'
+  | 'sm'
+  | 'p';
+
 type SlotTypes = 'base' | 'prefix' | 'suffix' | 'content';
 
 interface TypographyProps extends TextProps {
@@ -63,19 +76,26 @@ const Typography: React.FC<TypographyProps> = ({
   };
 
   const variantClasses: Record<Variant, string> = {
-    h1: 'text-4xl font-bold',
-    h2: 'text-3xl font-bold',
-    h3: 'text-2xl font-semibold',
-    h4: 'text-xl font-semibold',
-    h5: 'text-lg font-medium',
-    h6: 'text-base font-medium',
-    p: 'text-sm font-normal',
+    // h1: 'text-[34px] font-bold',
+    // h2: 'text-[28px] font-bold',
+    // h3: 'text-[24px] font-semibold',
+    // h4: 'text-[20px] font-semibold',
+    // h5: 'text-[18px] font-medium',
+    // h6: 'text-[16px] font-medium',
+    // body: 'text-[14px] font-normal',
+    // bodysm: 'text-[12px] font-normal',
+    // caption: 'text-[11px] font-normal',
+    // overline: 'text-[10px] uppercase font-medium tracking-wide',
+    // sm: 'text-[8px] font-normal',
+    // p: 'text-[14px] font-normal',
   };
+
+  console.log('text: --> ', text, cn(variantClasses[variant], className, classNames?.content));
 
   const textStyle: TextStyle = {
     fontFamily: AddfontFamily(),
-    writingDirection: isLangRTL ? 'rtl' : 'ltr', // ✅ respect RTL
-    textAlign: isLangRTL ? 'right' : 'left', // ✅ fix Arabic layout
+    writingDirection: isLangRTL ? 'rtl' : 'ltr',
+    textAlign: isLangRTL ? 'right' : 'left',
   };
 
   const content = text
