@@ -32,7 +32,6 @@
       "theme/*": ["./src/theme/*"],
       "i18n/*": ["./src/i18n/*"],
       "api/*": ["./src/api/*"]
-      // Add more aliases as needed
     }
   }
 }

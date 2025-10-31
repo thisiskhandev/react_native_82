@@ -14,6 +14,9 @@ import { useDispatch } from 'react-redux';
 import { setAppLanguage } from 'redux/slices/appSettings';
 import StoreProvider from './StoreProvider';
 import { cn } from 'lib/helper';
+// import AppNavigator from 'navigation/AppNavigator';
+// import { Login } from 'screens/auth';
+// import LoginScreen from 'screens/auth/LoginScreen';
 
 const btns = [
   {
@@ -44,8 +47,10 @@ const App = () => {
     })();
   }, [dispatch]);
 
+  // return <LoginScreen />;
+
   return (
-    <View className='flex h-screen items-center justify-center gap-5 bg-slate-700'>
+    <View className='flex h-screen items-center justify-center gap-5 bg-red-400'>
       <View className='flex w-full max-w-[300px] items-center gap-5'>
         {currentLocale && (
           <Text className='text-h1 text-white'>Current Locale: {currentLocale}</Text>

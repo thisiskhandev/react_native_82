@@ -1,4 +1,4 @@
-import { AddressReducer, AppReducer, NotificationReducer, UserReducer } from '../slices/index';
+import { AddressReducer, AppReducer, NotificationReducer, UserReducer } from './slices/index';
 
 export const REDUCERS = {
   user: UserReducer,

@@ -1,8 +1,8 @@
-import { FONT_SIZES } from './src/lib/fonts';
+// import { FONT_SIZES } from './src/lib/fonts';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./App.tsx', './components/**/*.{js,jsx,ts,tsx}'],
+  content: ['./App.tsx', './src/**/*.{jsx,tsx}'],
   presets: [require('nativewind/preset')],
   theme: {
     extend: {
