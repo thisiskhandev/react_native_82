@@ -22,7 +22,7 @@ module.exports = {
           utils: './src/utils',
           navigation: './src/navigation',
           constants: './src/constants',
-          redux: './src/redux',
+          store: './src/redux',
           hooks: './src/hooks',
           theme: './src/theme',
           assets: './src/assets',

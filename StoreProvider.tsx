@@ -1,20 +1,27 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import { ActivityIndicator } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { store, persistor } from 'redux/store';
+// import React from 'react';
+// import { PersistGate } from 'redux-persist/integration/react';
+// import { ActivityIndicator } from 'react-native';
+// import { SafeAreaProvider } from 'react-native-safe-area-context';
+// // import { store, persistor } from 'store/store';
+// import { Provider } from 'react-redux';
+// import store from 'store/store';
 
-interface StoreProviderProps {
-  children: React.ReactNode;
-}
+// interface StoreProviderProps {
+//   children: React.ReactNode;
+// }
 
-const StoreProvider = ({ children }: StoreProviderProps) => (
-  <Provider store={store}>
-    <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
-      <SafeAreaProvider>{children}</SafeAreaProvider>
-    </PersistGate>
-  </Provider>
-);
+// const StoreProvider = ({ children }: StoreProviderProps) => {
+//   console.log('store', store);
 
-export default StoreProvider;
+//   return (
+//     <SafeAreaProvider>
+//       <Provider store={store}>
+//         {/* <PersistGate loading={<ActivityIndicator />} persistor={persistor}> */}
+//         {children}
+//         {/* </PersistGate> */}
+//       </Provider>
+//     </SafeAreaProvider>
+//   );
+// };
+
+// export default StoreProvider;

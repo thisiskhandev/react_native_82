@@ -4,7 +4,8 @@ import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Loader } from 'components/index';
 import { COLORS, isIOS } from 'lib/index';
 import { cn } from 'lib/index';
-import { RootState, useAppSelector } from 'redux/index';
+import { useAppSelector } from 'store/hooks';
+import { RootState } from 'store/store';
 
 interface WrapperProps {
   children: React.ReactNode;
@@ -31,7 +32,7 @@ const Wrapper: React.FC<WrapperProps> = ({
   contentClassName,
   style,
 }) => {
-  const isAppLoading = useAppSelector((state: RootState) => state.app.isAppLoading);
+  const { isAppLoading } = useAppSelector((state: RootState) => state.App);
   const insets = useSafeAreaInsets();
   const [isKeyboardVisible, setKeyboardVisible] = useState(false);
 

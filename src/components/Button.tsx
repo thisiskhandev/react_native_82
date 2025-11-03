@@ -8,9 +8,10 @@ import {
 } from 'react-native';
 import { FontSize, StyleType } from 'types/index';
 import { Typography, RowComponent } from '../components';
-import { RootState, useAppSelector } from 'redux/store';
 import Icons, { IconComponentProps } from './Icons';
 import { cn, COLORS } from '../lib';
+import { useAppSelector } from 'store/hooks';
+import { RootState } from 'store/store';
 
 type SlotTypes = 'base' | 'prefix' | 'suffix' | 'container';
 
@@ -46,7 +47,7 @@ const Button: React.FC<ButtonProps> = ({
   classNames,
   ...props
 }) => {
-  const isAppLoading = useAppSelector((state: RootState) => state.app.isAppLoading);
+  const { isAppLoading } = useAppSelector((state: RootState) => state.App);
   const buttonStyles = [
     styles.button,
     disabled || (loading && isAppLoading) ? styles.disabledButton : null,

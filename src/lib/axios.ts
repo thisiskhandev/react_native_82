@@ -1,5 +1,5 @@
 // import axios, { AxiosError, AxiosRequestConfig } from 'axios';
-// import { store } from 'redux/store';
+// import { store } from 'store/store';
 // import { setIsAppLoading, setIsUserLoggedIn } from 'redux/slices/appSettings';
 // import { getItem, removeMultipleItem } from './storage';
 // import { CONSTANTS, ENV_CONSTANTS } from './constants';

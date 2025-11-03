@@ -1,15 +1,13 @@
-// import '../../global.css';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { useSelector } from 'react-redux';
-import { RootState, useAppSelector } from 'redux/store';
 import AuthNavigator from './AuthNavigator';
-import MainNavigator from './MainNavigation';
 import { theme } from 'theme/CommonTheme';
 import { navigationRef } from './Navigators';
+import { useAppSelector } from 'store/hooks';
+import { RootState } from 'store/store';
 
 const AppNavigator = () => {
-  const { isUserLoggedIn } = useAppSelector((state: RootState) => state.app);
+  const { isUserLoggedIn } = useAppSelector((state: RootState) => state.App);
 
   return (
     <NavigationContainer theme={theme} ref={navigationRef}>

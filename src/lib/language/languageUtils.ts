@@ -1,8 +1,8 @@
 import i18n from 'i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert, I18nManager } from 'react-native';
-import { store } from 'redux/store';
-import { setAppLanguage } from 'redux/slices/appSettings';
+import { store } from 'store/store';
+import { setAppLanguage } from 'store/slices/appSettings';
 // import RNRestart from 'react-native-restart';
 
 export const LANGUAGES = {
