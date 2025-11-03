@@ -15,6 +15,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { setAppLanguage } from 'store/slices/appSettings';
 import { cn } from 'lib/helper';
 import { store } from 'store/store';
+import StoreProvider from './StoreProvider';
 
 const btns = [
   {
@@ -77,10 +78,8 @@ const App = () => {
 
 export default function Main() {
   return (
-    <SafeAreaProvider>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </SafeAreaProvider>
+    <StoreProvider>
+      <App />
+    </StoreProvider>
   );
 }
